@@ -6,7 +6,7 @@
 /*   By: akulaksi <akulaksi@student.42istanbul.c    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/02/10 15:54:16 by akulaksi          #+#    #+#             */
-/*   Updated: 2024/02/11 12:46:28 by akulaksi         ###   ########.fr       */
+/*   Updated: 2024/02/11 12:57:50 by akulaksi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,11 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] != '\0' && s2[i] != '\0')
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
 			return (s1[i] - s2[i]);
 		i++;
-	}
-	if (s1[i] != '\0' || s2[i] != '\0')
-	{
-		return (s1[i] - s2[i]);
 	}
 	return (0);
 }
